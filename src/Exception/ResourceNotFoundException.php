@@ -12,7 +12,7 @@ namespace Fetch\Exception;
 /**
  * Exception class representing a requested API resource that does not exist
  */
-class ContextNotFoundException extends BaseApiException
+class ResourceNotFoundException extends BaseApiException
 {
     /**
      * {@inheritdoc}
