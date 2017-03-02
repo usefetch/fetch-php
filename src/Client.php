@@ -65,7 +65,7 @@ class Client
                 'User-Agent' => $this->getUserAgent()
             ],
             'http_errors' => true,
-            'verify' => true
+            'verify' => false
         ]);
     }
 

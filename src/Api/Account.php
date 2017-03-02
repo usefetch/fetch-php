@@ -9,7 +9,7 @@
  */
 namespace Fetch\Api;
 
-class Account implements BaseApi
+class Account extends BaseApi
 {
     /**
      * Endpoint to call /account

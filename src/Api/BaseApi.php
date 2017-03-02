@@ -9,7 +9,7 @@
  */
 namespace Fetch\Api;
 
-abstract class Api
+abstract class BaseApi
 {
     /**
      * @var \Fetch\Client
@@ -79,7 +79,7 @@ abstract class Api
         }
 
         // Build the auth signature
-        $signature = $this->buildSignature($jsonData);
+        $signature = $this->buildSignature($requestData);
 
         // Add our key + signature globally
         $requestData['apiKey'] = $this->client->getApiKey();
@@ -92,7 +92,7 @@ abstract class Api
         // Send the request
         try {
             $response = $httpClient->request($method, $this->client->getEndpoint().$endpoint, [
-                $dataKey => $data
+                $dataKey => $requestData
             ]);
 
             // Read the string
