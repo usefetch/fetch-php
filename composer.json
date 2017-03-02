@@ -1,0 +1,25 @@
+{
+  "name": "usefetch/fetch-php",
+  "description": "PHP wrapper library for the Fetch API",
+  "homepage": "https://usefetch.io",
+  "keywords": [
+	  "fetch",
+	  "php"
+  ],
+  "authors": [
+    {
+      "name": "Lewis Theobald",
+      "email": "lewis@usefetch.io",
+      "role": "CEO"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "autoload": {
+	  "psr-4": {
+		  "Fetch\\": "src/"
+      }
+  }
+}
